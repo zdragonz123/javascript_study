@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+
+       .menu{
+           min-height:500px;
+           width: 10%;
+           background-color: aliceblue;
+           float: left;
+       }
+        .content{
+            min-height:500px;
+            width: 90%;
+            background-color: antiquewhite;
+            display: inline-block;
+        }
+    </style>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+<div class="menu"></div>
+<div class="content"> </div>
+<script>
+    $(function(){
+        var screenHeight =  $(window).height();
+       $(".menu").css("height",screenHeight);
+        $(".content").css("height",screenHeight);
+        $(".menu").on("click",function(){
+            $(".content").load("loadfiles.html");
+        })
+
+    })
+</script>
+</body>
+</html>
